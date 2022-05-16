@@ -5,6 +5,11 @@
 
 int InitVoteMachine(struct VoteMachine* voteMachine)
 {
+
+    // TODO: all this opening and reopening may not be necessary anymore, check
+    // if it works if opened only in append+ mode
+
+
     // must open files first with append mode in case it does not exist because
     // opening with r+ requires that the file exists
     voteMachine->votersFile = fopen(VOTER_FILE_PATH, "a");
